@@ -8,6 +8,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+
+
 import java.lang.reflect.Field;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -32,7 +34,7 @@ public class MainTest {
     @BeforeEach
     void setUp() {
         circle = new Circle(2);
-        cylinder = new Cylinder(2,2);
+        cylinder = new Cylinder(2);
         rectangle = new Rectangle(1,2);
         cuboid = new Cuboid(1, 2, 3);
         employee = new Employee(1, "Jane Doe", 20000);
@@ -59,6 +61,9 @@ public class MainTest {
     @Test
     public void testGetArea() throws NoSuchFieldException {
         assertTrue(String.format("%.2f", circle.getArea()).contains("12"));
+    }
+
+    private void assertTrue(boolean contains) {
     }
 
     @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
