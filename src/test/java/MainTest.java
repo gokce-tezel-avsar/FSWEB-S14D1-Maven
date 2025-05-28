@@ -15,6 +15,7 @@ import java.lang.reflect.Field;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @ExtendWith(ResultAnalyzer.class)
@@ -63,8 +64,6 @@ public class MainTest {
         assertTrue(String.format("%.2f", circle.getArea()).contains("12"));
     }
 
-    private void assertTrue(boolean contains) {
-    }
 
     @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
     @Test
